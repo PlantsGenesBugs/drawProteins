@@ -73,7 +73,7 @@ use the `draw_domains()` function to which we have to provide the
 ggplot object `p` and the data which is called `rel_data`. 
 The default is to label the chains. The labels can be removed using the 
 argument `label_chains = FALSE`.
-```{r using draw_domains, fig.height=3, fig.wide = TRUE}
+```{r using draw_domains, fig.height=3, fig.wide = TRUE, label_chains=TRUE}
 p <- draw_domains(p, rel_data)
 p
 ```
@@ -93,18 +93,6 @@ p
 ```
 
 
-### Adding titles to the plots 
-
-Using ggplot2 then allows the addition of titles:
-```{r add_titles, fig.height=4, fig.wide = TRUE}
-# add titles
-rel_subtitle <- paste0("circles = phosphorylation sites\n",
-                "RHD = Rel Homology Domain\nsource:Uniprot")
-
-p <- p + labs(title = "Rel A/p65",
-                subtitle = rel_subtitle)
-p
-```
 
 # Session info
 Here is the output of `sessionInfo()` on the system on which this document was
